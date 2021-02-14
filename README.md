@@ -18,3 +18,15 @@ sudo docker ps -aq; sudo docker stop $(sudo docker ps -aq); sudo docker rm $(sud
 sudo docker exec -it notejam-running-app /bin/sh
 
 
+# Amazon Container Services
+- Create a Repository
+- Create a Cluster
+- Create Task Definitions
+  - Add Container
+
+- Create a Target Group
+- Create a Load Balancer
+- Create a Cluster Service
+
+aws ecr get-login-password --region eu-central-1 | sudo docker login --username AWS --password-stdin 619097795891.dkr.ecr.eu-central-1.amazonaws.com
+sudo docker build -t notejam .
