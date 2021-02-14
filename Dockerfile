@@ -1,5 +1,5 @@
-FROM python:2.7
-
+#FROM python:2.7
+FROM 619097795891.dkr.ecr.eu-central-1.amazonaws.com/python:2.7
 ENV VIRTUAL_ENV=/opt/venv
 RUN virtualenv $VIRTUAL_ENV -p python2.7
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
