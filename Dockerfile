@@ -17,4 +17,6 @@ RUN pip install mysqlclient
 
 ADD docker-entrypoint.sh /code/
 RUN chmod +x /code/docker-entrypoint.sh
+
+EXPOSE 80
 ENTRYPOINT ["/code/docker-entrypoint.sh"]
