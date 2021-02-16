@@ -8,7 +8,8 @@
 - [6. Target Groups](#6-target-groups)
 - [7. Load Balancer](#7-load-balancer)
 - [8. Cluster Service](#8-cluster-service)
-- [9. CloudBuild Project](#9-cloudbuild-project)
+- [9. CodeBuild Project](#9-codebuild-project)
+- [10. CodeBuild Project](#9-codebuild-project)
 
 --------------------------------------------
 
@@ -143,6 +144,10 @@ artifacts:
     - imagedefinitions.json
 
 ```
+
+### Run all Push commands to push docker image to ECR
+![Push Commands](imgs/03_ECR_04.png)
+
 ----------------------------------
 ## 4. ECS Cluster
 Create  a Cluster with the below information:
