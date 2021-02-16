@@ -29,6 +29,8 @@ Neet a new infrastructure design which can offer:
 ## 2. Migration Roadmap
 Data centre migration to the cloud.  A best-practice migration strategy.
 
+![Existing Infrastructure](imgs/roadmap.png)
+
 ### 1. Cloud Assessment Phase
     - Assess Cost
     - Assess Architecture
@@ -75,11 +77,11 @@ Containerized CI / CD Pipeline using Docker, CodeBuild, ECS Fargate and a LoadBa
 ### Artifacts
 All elements which are created as part of the Migration Process such as source-code, scripts and documents.
 
-    - Git Repository
-    - Dockerfile
-    - buildspec.yml
-    - Cost Estimation 
-        Ref: https://calculator.aws/#/estimate?id=f4f1f3516fd17528ab352dc4bc1a441da6a1f560
+    - Git Repository <https://github.com/ganesh35/notejam>
+    - Dockerfile <https://github.com/ganesh35/notejam/blob/main/Dockerfile>
+    - buildspec.yml <https://github.com/ganesh35/notejam/blob/main/buildspec.yml>
+    - Cost Estimation <https://calculator.aws/#/estimate?id=f4f1f3516fd17528ab352dc4bc1a441da6a1f560>
+        
 ### Pilot
 A working solution of the deployed notejam
 site: https://notejam.butcha.ga
