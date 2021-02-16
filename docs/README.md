@@ -1,12 +1,12 @@
 # Migration of notejam app to AWS-Cloud
 - [1. Introduction](#1-introduction)
-- [2. Migration Roadmap](#migration-roadmap)
-- [3. Infrastructure](#infrastructure)
-- [4. Outputs](#outputs)
+- [2. Migration Roadmap](#2-migration-roadmap)
+- [3. Infrastructure](#3-infrastructure)
+- [4. Outputs](#4-outputs)
     - [Solution Document](#solution-document)
     - [Artifacts](#artifacts)
     - [Working Solution](#working-solution)    
-- [5. Challenges and Solutions](#challenges-and-solutions)    
+- [5. Challenges and Solutions](#5-challenges-and-solutions)    
 - [6. Conclusion](#6-conclusion)
 --------------------------------------------
 
@@ -18,6 +18,7 @@ Notejam web application allows user to sign up/in/out and create/view/edit/delet
 Application is designed to be easy to build and run locally. It is identified as not an optimal architecture to meet the business requirements.
 ### What to achieve
 Neet a new infrastructure design which can offer:
+
     - Dynamic Scalability 
     - Data durability
     - Availability
@@ -25,7 +26,7 @@ Neet a new infrastructure design which can offer:
     - Ensuring parity between Dev, Test, and Production Environments
     - Security and Monitoring
 
-## Migration Roadmap
+## 2. Migration Roadmap
 Data centre migration to the cloud.  A best-practice migration strategy.
 
 ### 1. Cloud Assessment Phase
@@ -63,9 +64,12 @@ Data centre migration to the cloud.  A best-practice migration strategy.
 ## Infrastructure
 ### Existing Infrastructure:
 A on-premises monolithic application combined together with Database, Web Server and Web Application. 
+![Existing Infrastructure](imgs/architecture_1.png)
 
 ### Proposed Architecture:
 Containerized CI / CD Pipeline using Docker, CodeBuild, ECS Fargate and a LoadBalancer which seperates Database and Web Application.  It also allows developers to choose other tech-stacks.
+
+![Proposed Infrastructure](imgs/architecture_2.png)
 
 ## Outputs
 ### Artifacts
