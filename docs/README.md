@@ -56,14 +56,13 @@ Data centre migration to the cloud.  A best-practice migration strategy.
     - High Availability
 
 ### 6. Optimization Phase
-
     - Unitilization
     - Monitoring
     - Efficiency
     - Performance
     - Re-engineering
 
-## Infrastructure
+## 3. Infrastructure
 ### Existing Infrastructure:
 A on-premises monolithic application combined together with Database, Web Server and Web Application. 
 ![Existing Infrastructure](imgs/architecture_1.png)
@@ -76,11 +75,11 @@ Containerized CI / CD Pipeline using Docker, CodeBuild, ECS Fargate and a LoadBa
 ## Outputs
 ### Artifacts
 All elements which are created as part of the Migration Process such as source-code, scripts and documents.
-
-    - Git Repository <https://github.com/ganesh35/notejam>
-    - Dockerfile <https://github.com/ganesh35/notejam/blob/main/Dockerfile>
-    - buildspec.yml <https://github.com/ganesh35/notejam/blob/main/buildspec.yml>
-    - Cost Estimation <https://calculator.aws/#/estimate?id=f4f1f3516fd17528ab352dc4bc1a441da6a1f560>
+    
+    - [Git Repository]: <https://github.com/ganesh35/notejam>
+    - [Dockerfile]: <https://github.com/ganesh35/notejam/blob/main/Dockerfile>
+    - [buildspec.yml]: <https://github.com/ganesh35/notejam/blob/main/buildspec.yml>
+    - [Cost Estimation]: <https://calculator.aws/#/estimate?id=f4f1f3516fd17528ab352dc4bc1a441da6a1f560>
         
 ### Pilot
 A working solution of the deployed notejam
