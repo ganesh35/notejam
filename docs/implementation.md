@@ -8,6 +8,7 @@
 - [6. Target Groups](#6-target-groups)
 - [7. Load Balancer](#7-load-balancer)
 - [8. Cluster Service](#8-cluster-service)
+- [9. CloudBuild Project](#9-cloudbuild-project)
 
 --------------------------------------------
 
@@ -200,4 +201,24 @@ Choose Target Group from EC2 section and create a new group
 Leave rest of the fields to their defaults and click 'Create service' to complete.
 
 ----------------------------------
-## 8. Cluster Service
+## 9. CodeBuild Project
+
+### Provide a Project name
+![CodeBuild Project name](imgs/09_CodeBuild_01.jpg)
+### Define Source provider
+![CodeBuild Source provider](imgs/09_CodeBuild_02.jpg)
+### Define Webhook events
+Please select PUSH from Event type dropdown
+![Webhook events](imgs/09_CodeBuild_03.jpg)
+### Define Environment
+Choose Ubuntu as OS and other paramaters as per below image
+![Environment](imgs/09_CodeBuild_04.jpg)
+### Service role
+- Create a new service role or use an existing role.
+- We have to defined buildspec.yml file as part of our source code.
+![Environment](imgs/09_CodeBuild_05.png)
+![Environment](imgs/09_CodeBuild_06.png)
+Leave rest of fields to defaults and click 'Create build project' to complete.
+
+----------------------------------
+## 10. CodeBuild Project
