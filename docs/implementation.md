@@ -104,6 +104,46 @@ Choose as Private repository and leave other fields to defaults.
 ![Choose 'Create' from ECR](imgs/03_ECR_02.png)
 ### Copy repository URI and save it for later use:
 ![Copy repository URI](imgs/03_ECR_03.jpg)
+
+### Update contents of buildspec.yml with the new URI
+```yml
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Loggin in to Amazon ECR...
+      - aws --version
+      - docker --version
+      - aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 619097795891.dkr.ecr.eu-central-1.amazonaws.com
+      # Replace repository URI
+      - REPOSITORY_URI=619097795891.dkr.ecr.eu-central-1.amazonaws.com/notejam
+      - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
+      - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
+      - echo $COMMIT_HASH
+      - echo $IMAGE_TAG
+      - echo $REPOSITORY_URI
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build -t $REPOSITORY_URI:latest .
+      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker images...
+      - docker push $REPOSITORY_URI:latest
+      - docker push $REPOSITORY_URI:$IMAGE_TAG
+      - echo Writing image definitions file...
+      # Replace name as per ECR repository name
+      - printf '[{"name":"notejam", "imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json   
+      - cat imagedefinitions.json  
+artifacts:
+  files: 
+    - imagedefinitions.json
+
+```
 ----------------------------------
 ## 4. Create AWS ECS Cluster
 Create  a Cluster with the below information:
@@ -116,9 +156,9 @@ Create  a Cluster with the below information:
 ### Choose 'FARGATE' as launch type compatibility
 ![Choose 'FARGATE'](imgs/05_TaskDef_01.png)
 ### Provide a Task Definition name
-![Task Definition name](imgs/05_TaskDef_02.png)
+![Task Definition name](imgs/05_TaskDef_02a.png)
 ### Provide a Task size 
-![Task size](imgs/05_TaskDef_03.png)
+![Task size](imgs/05_TaskDef_02b.png)
 
 
 
