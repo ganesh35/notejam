@@ -85,7 +85,8 @@ All elements which are created as part of the Migration Process such as source-c
 A working solution of the deployed notejam
 site: https://notejam.butcha.ga
 ### Tools and Technologies used:
-        - GitHub
+        - [GitHub](http://github.com)
+        - Docker
         - ECR
         - ECS with FARGATE (for container management / orchestration)
         - CodeBuild
