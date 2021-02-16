@@ -225,5 +225,13 @@ Choose Ubuntu as OS and other paramaters as per below image
 ![Environment](imgs/09_CodeBuild_06.png)
 Leave rest of fields to defaults and click 'Create build project' to complete.
 
+### Service role
+Before starting CodeBuild make sure this Service role has policy of 'AmazonEC2ContainerRegistryFullAccess'
+![AmazonEC2ContainerRegistryFullAccess](imgs/09_CodeBuild_07.png)
+
+### Start build
+![Start build](imgs/09_CodeBuild_08.png)
+### Make sure build completes Successfully
+![Start success](imgs/09_CodeBuild_09.png)
 ----------------------------------
 ## 10. CodeBuild Project
