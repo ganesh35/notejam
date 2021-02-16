@@ -99,9 +99,9 @@ Create  a Cluster with the below information:
 ### Create Cluster from ECS Service
 ![Create Cluster from ECS Service](imgs/01_Cluster_01.png){ width=50% }
 ### Choose 'Networking only' template
-![Choose 'Networking only' template](imgs/01_Cluster_02.webp)
+![Choose 'Networking only' template](imgs/01_Cluster_02.png)
 ### Provide 'Custer name' and click 'Create'
-![Provide 'Custer name' and click 'Create'](imgs/01_Cluster_03.webp)
+![Provide 'Custer name' and click 'Create'](imgs/01_Cluster_03.png)
 
 
 
