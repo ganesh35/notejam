@@ -1,35 +1,86 @@
-# notejam
-Notejam application implemented using Django framework.  Django version: 1.6
+***************
+Notejam: Django
+***************
+
+Notejam application implemented using `Django <https://www.djangoproject.com/>`_ framework.
+
+Django version: 1.6
+
+==========================
+Installation and launching
+==========================
+
+-----
+Clone
+-----
+
+Clone the repo:
+
+.. code-block:: bash
+
+    $ git clone git@github.com:komarserjio/notejam.git YOUR_PROJECT_DIR/
+
+-------
+Install
+-------
+Use `virtualenv <http://www.virtualenv.org>`_ or `virtualenvwrapper <http://virtualenvwrapper.readthedocs.org/>`_
+for `environment management <http://docs.python-guide.org/en/latest/dev/virtualenvs/>`_.
+
+Install dependencies:
+
+.. code-block:: bash
+
+    $ cd YOUR_PROJECT_DIR/django/
+    $ virtualenv .venv -p python2.7     # This version of Django only works on python2
+    $ source .venv/bin/activate
+    $ pip install -r requirements.txt
+
+Create database schema:
+
+.. code-block:: bash
+
+    $ cd YOUR_PROJECT_DIR/django/notejam/
+    $ ./manage.py syncdb
+    $ ./manage.py migrate
+
+------
+Launch
+------
+
+Start django web server:
+
+.. code-block:: bash
+
+    $ cd YOUR_PROJECT_DIR/django/notejam/
+    $ ./manage.py runserver
+
+Go to http://127.0.0.1:8000/ in your browser.
+
+---------
+Run tests
+---------
+
+Run functional and unit tests:
+
+.. code-block:: bash
+
+    $ cd YOUR_PROJECT_DIR/django/notejam/
+    $ ./manage.py test
 
 
-******************************
-Notejam: Django Dockerization
-******************************
+============
+Contribution
+============
+Do you have python/django experience? Help the app to follow python and django best practices.
 
-sudo docker build -t notejam-django-image .
-sudo docker run --name notejam-running-app -p 80:80 notejam-django-image
+Please send your pull requests in the ``master`` branch.
+Always prepend your commits with framework name:
 
-restart:
-sudo docker stop notejam-running-app; sudo docker rm notejam-running-app; sudo docker run -d --name notejam-running-app -p 80:80 notejam-django-image
+.. code-block:: bash
 
-sudo docker stop notejam-running-app; sudo docker rm notejam-running-app; sudo docker run -d --name notejam-running-app -p 80:80 notejam-django-image
+    Django: Implemented sign in functionality
 
-sudo docker ps -aq; sudo docker stop $(sudo docker ps -aq); sudo docker rm $(sudo docker ps -aq); sudo docker rmi $(sudo docker images -q)
-sudo docker exec -it notejam-running-app /bin/sh
+Read `contribution guide <https://github.com/komarserjio/notejam/blob/master/contribute.rst>`_ for details.
 
 
-# Amazon Container Services
-- Create a Repository
-- Create a Cluster
-- Create Task Definitions
-  - Add Container
 
-- Create a Target Group
-- Create a Load Balancer
-- Create a Cluster Service
-
-sudo aws configure
-sudo aws ecr get-login-password --region eu-central-1 | sudo docker login --username AWS --password-stdin 619097795891.dkr.ecr.eu-central-1.amazonaws.com
-sudo docker build -t notejam .
-sudo docker tag notejam:latest 619097795891.dkr.ecr.eu-central-1.amazonaws.com/notejam:latest
-sudo docker push 619097795891.dkr.ecr.eu-central-1.amazonaws.com/notejam:latest
