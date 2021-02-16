@@ -88,7 +88,7 @@ site: https://notejam.butcha.ga
         - TargetGroups
         - Load Balancer
 
-## Challenges and Solutions
+## 5. Challenges and Solutions
     Challenge: Source code and their framework versions are obsolete
     Solution: Containerization 
     Result: Achieved supporting current development and allowing the dev-teams to switch between tech-stacks
