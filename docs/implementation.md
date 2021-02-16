@@ -15,13 +15,14 @@
 Example Folder Structure for a Dockerized application:
 
 Folder structure:
-
+```bash
 ├── code                                // source code goes here, Django in this case
 ├── Dockerfile                          // Dockerfile to build docker image
 ├── buildspec.yml                       // Build specification for AWS CodeBuild
 ├── requirements.txt                    // dependency file for Django packages
 ├── docker-entrypoint.sh                // Entrypoint scripts for Data definitions, migrations, and Unit tests
 └── READMEM.rst                          // Basic informatino
+```
 
 ## Create necessary files and folders
 ```sh
