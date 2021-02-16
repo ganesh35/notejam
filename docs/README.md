@@ -72,7 +72,7 @@ Containerized CI / CD Pipeline using Docker, CodeBuild, ECS Fargate and a LoadBa
 
 ![Proposed Infrastructure](imgs/architecture_2.png)
 
-## Outputs
+## 4. Outputs
 ### Artifacts
 All elements which are created as part of the Migration Process such as source-code, scripts and documents.
     
@@ -95,13 +95,13 @@ site: https://notejam.butcha.ga
         - Load Balancer
 
 ## 5. Challenges and Solutions
-    Challenge: Source code and their framework versions are obsolete
-    Solution: Containerization 
-    Result: Achieved supporting current development and allowing the dev-teams to switch between tech-stacks
+    **Challenge**: Source code and their framework versions are obsolete
+    **Solution**: Containerization 
+    **Result**: Achieved supporting current development and allowing the dev-teams to switch between tech-stacks
 
-    Challenge: Parity and communication between Dev, Test and Production environments
-    Solution: CI / CD Pipeline
-    Result: 
+    **Challenge**: Parity and communication between Dev, Test and Production environments
+    **Solution**: CI / CD Pipeline
+    **Result**: 
         - Developers can push changes to 'dev' branch on the git repository to run unit tests and can confirm test-ready application.
         - Testers can run automated/customized tests on test-ready application.
         - Pushing changes to branch 'master' on git repository deploys application on production environment.
@@ -113,9 +113,3 @@ site: https://notejam.butcha.ga
 - Improved Cost Management
 - Security, reliability, scalability, and availability
 - Data durability
-
-* [Twitter Bootstrap] - great UI boilerplate for modern web apps
-
-[//]: # References
-[Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
-
