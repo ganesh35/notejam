@@ -157,9 +157,9 @@ Create  a Cluster with the below information:
 ### Choose 'FARGATE' as launch type compatibility
 ![Choose 'FARGATE'](imgs/05_TaskDef_01.png)
 ### Provide a Task Definition name
-![Task Definition name](imgs/05_TaskDef_02a.png)
+![Task Definition name](imgs/05_TaskDef_02a.jpg)
 ### Provide a Task size 
-![Task size](imgs/05_TaskDef_02b.png)
+![Task size](imgs/05_TaskDef_02b.jpg)
 ### Click on 'Add Container'
   - Provide a 'Container name'
   - Enter ECR Repository URI as Image 
