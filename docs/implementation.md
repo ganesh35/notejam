@@ -2,7 +2,9 @@
 
 - [1. Preparing Sourcecode](#1-preparing-source-code)
 - [2. Dockerizing the application](#2-dockerizing-the-application)
+- [3. Create Repository in ECR](#3-create-repository-in-ecr)
 - [3. Create AWS ECS Cluster](#3-create-aws-ecs-cluster)
+- [4. Create Task Definition](#4-create-task-definition)
 - [3. Infrastructure](#3-infrastructure)
 - [4. Outputs](#4-outputs)
     - [Solution Document](#solution-document)
@@ -94,14 +96,29 @@ sudo docker stop notejam-running-app; sudo docker rm notejam-running-app; sudo d
 - Create Git repository and push changes to it (or, clone repository from <https://github.com/ganesh35/notejam> )
 
 ----------------------------------
-## 3. Create AWS ECS Cluster
+## 3. Create Repository in ECR
+### Choose 'Create' from ECR 
+Choose as Private repository and leave other fields to defaults.
+![Choose 'Create' from ECR](imgs/03_ECR_01.png)
+### Click 'create' to complete repository creation
+![Choose 'Create' from ECR](imgs/03_ECR_02.png)
+### Copy repository URI and save it for later use:
+![Copy repository URI](imgs/03_ECR_03.png)
+----------------------------------
+## 4. Create AWS ECS Cluster
 Create  a Cluster with the below information:
 ### Choose 'Networking only' template
-![Choose 'Networking only' template](imgs/01_Cluster_02.png)
+![Choose 'Networking only' template](imgs/04_Cluster_02.png)
 ### Provide 'Custer name' and click 'Create'
-![Provide 'Custer name' and click 'Create'](imgs/01_Cluster_03.png)
+![Provide 'Custer name' and click 'Create'](imgs/04_Cluster_03.png)
 
-
+## 4. Create Task Definition
+### Choose 'FARGATE' as launch type compatibility
+![Choose 'FARGATE'](imgs/05_TaskDef_01.png)
+### Provide a Task Definition name
+![Task Definition name](imgs/05_TaskDef_02.png)
+### Provide a Task size 
+![Task size](imgs/05_TaskDef_03.png)
 
 
 
