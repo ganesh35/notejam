@@ -3,8 +3,8 @@
 - [1. Preparing Sourcecode](#1-preparing-source-code)
 - [2. Dockerizing the application](#2-dockerizing-the-application)
 - [3. Create Repository in ECR](#3-create-repository-in-ecr)
-- [3. Create AWS ECS Cluster](#3-create-aws-ecs-cluster)
-- [4. Create Task Definition](#4-create-task-definition)
+- [4. Create AWS ECS Cluster](#4-create-aws-ecs-cluster)
+- [5. Create Task Definition](#5-create-task-definition)
 - [3. Infrastructure](#3-infrastructure)
 - [4. Outputs](#4-outputs)
     - [Solution Document](#solution-document)
@@ -152,7 +152,8 @@ Create  a Cluster with the below information:
 ### Provide 'Custer name' and click 'Create'
 ![Provide 'Custer name' and click 'Create'](imgs/04_Cluster_03.png)
 
-## 4. Create Task Definition
+----------------------------------
+## 5. Create Task Definition
 ### Choose 'FARGATE' as launch type compatibility
 ![Choose 'FARGATE'](imgs/05_TaskDef_01.png)
 ### Provide a Task Definition name
