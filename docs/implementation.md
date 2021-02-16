@@ -259,9 +259,8 @@ Before starting CodeBuild make sure this Service role has policy of 'AmazonEC2Co
   - LoadBalancer can be configured in accoreance with Target Groups to run web service from port 443
 ## Working Demo
 <!-- blank line -->
-<figure class="video_container">
-  <video controls="true" allowfullscreen="true" poster="imgs/notejam_web.png">
-    <source src="imgs/ci_cd.mp4" type="video/mp4">    
-  </video>
-</figure>
+<video width="800" controls>
+  <source src="imgs/ci_cd.mp4" type="video/mp4">    
+</video>
 <!-- blank line -->
+
