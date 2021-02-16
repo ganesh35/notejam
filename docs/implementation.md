@@ -2,7 +2,7 @@
 
 - [1. Preparing Sourcecode](#1-preparing-source-code)
 - [2. Dockerizing the application](#2-dockerizing-the-application)
-- [2. Migration Roadmap](#2-migration-roadmap)
+- [3. Create AWS ECS Cluster](#3-create-aws-ecs-cluster)
 - [3. Infrastructure](#3-infrastructure)
 - [4. Outputs](#4-outputs)
     - [Solution Document](#solution-document)
@@ -59,7 +59,7 @@ python manage.py runserver 0.0.0.0:80
 
 ## 2. Dockerizing the application
 
-### update Dockerfile with the below contents
+### Update Dockerfile with the below contents
 ```dockerfile
 #FROM python:2.7
 FROM 619097795891.dkr.ecr.eu-central-1.amazonaws.com/python:2.7
@@ -94,15 +94,11 @@ sudo docker stop notejam-running-app; sudo docker rm notejam-running-app; sudo d
 - Create Git repository and push changes to it (or, clone repository from <https://github.com/ganesh35/notejam> )
 
 ----------------------------------
-
-
-
-
-
-
-
-
-
+## 3. Create AWS ECS Cluster
+Create  a Cluster with the below information:
+![Create Cluster from ECS Service](imgs/01_Cluster_01.jpg)
+![Choose 'Networking only' template](imgs/01_Cluster_02.jpg)
+![Provide 'Custer name' and click 'Create'](imgs/01_Cluster_03.jpg)
 
 
 
