@@ -160,6 +160,15 @@ Create  a Cluster with the below information:
 ![Task Definition name](imgs/05_TaskDef_02a.png)
 ### Provide a Task size 
 ![Task size](imgs/05_TaskDef_02b.png)
+### Click on 'Add Container'
+  - Provide a 'Container name'
+  - Enter ECR Repository URI as Image 
+  - add :latest at the end of the Image to make sure it picks up latest version
+![Container](imgs/05_TaskDef_02ba.png)
+![Container](imgs/05_TaskDef_02ba.png)
+![Container](imgs/05_TaskDef_02bc.png)
+Leave the rest fields as defaults and click 'Add' to complete.
+
 
 
 
