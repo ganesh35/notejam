@@ -1,6 +1,7 @@
 # Implementing Dockarized application on AWS with ECS and CI/CD Pipeline.
 
 - [1. Preparing Sourcecode](#1-preparing-source-code)
+- [2. Dockerizing the application](#2-dockerizing-the-application)
 - [2. Migration Roadmap](#2-migration-roadmap)
 - [3. Infrastructure](#3-infrastructure)
 - [4. Outputs](#4-outputs)
@@ -16,24 +17,23 @@ Example Folder Structure for a Dockerized application:
 
 Folder structure:
 ```bash
-├── code                                // source code goes here, Django in this case
-├── Dockerfile                          // Dockerfile to build docker image
-├── buildspec.yml                       // Build specification for AWS CodeBuild
-├── requirements.txt                    // dependency file for Django packages
-├── docker-entrypoint.sh                // Entrypoint scripts for Data definitions, migrations, and Unit tests
-└── READMEM.rst                          // Basic informatino
+├── code                                # source code goes here, Django in this case
+├── Dockerfile                          # Dockerfile to build docker image
+├── buildspec.yml                       # Build specification for AWS CodeBuild
+├── requirements.txt                    # dependency file for Django packages
+├── docker-entrypoint.sh                # Entrypoint scripts for Data definitions, migrations, and Unit tests
+└── READMEM.rst                         # Basic informatino
 ```
 
-## Create necessary files and folders
+### Create necessary files and folders
 ```sh
 mkdir code
 touch Dockerfile buildspec.yml docker-entrypoint.sh
 ```
+### Copy files
 - Copy folder <https://github.com/nordcloud/notejam/tree/master/django/notejam> to code in target directory
 - Copy <https://github.com/nordcloud/notejam/edit/master/django/README.rst> to README.rst
 - Copy <https://github.com/nordcloud/notejam/edit/master/django/requirements.txt> to requirements.txt
-
-## Dockerizing the application
 
 
 ### Create entrypoint file
@@ -56,6 +56,9 @@ python manage.py test
 echo "Starting server"
 python manage.py runserver 0.0.0.0:80
 ```
+
+## 2. Dockerizing the application
+
 ### update Dockerfile with the below contents
 ```dockerfile
 #FROM python:2.7
