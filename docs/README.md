@@ -119,3 +119,5 @@ site: https://notejam.butcha.ga
 - Improved Cost Management
 - Security, reliability, scalability, and availability
 - Data durability
+
+Proposed solution needs optimization and can be achieved over time.
