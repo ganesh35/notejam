@@ -103,7 +103,7 @@ Choose as Private repository and leave other fields to defaults.
 ### Click 'create' to complete repository creation
 ![Choose 'Create' from ECR](imgs/03_ECR_02.png)
 ### Copy repository URI and save it for later use:
-![Copy repository URI](imgs/03_ECR_03.png)
+![Copy repository URI](imgs/03_ECR_03.jpg)
 ----------------------------------
 ## 4. Create AWS ECS Cluster
 Create  a Cluster with the below information:
