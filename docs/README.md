@@ -84,27 +84,33 @@ All elements which are created as part of the Migration Process such as source-c
 ### Pilot
 A working solution of the deployed notejam
 site: https://notejam.butcha.ga
+
+![notejam](imgs/notejam_web.png)
+
+
 ### Tools and Technologies used:
-        - [GitHub](http://github.com)
-        - Docker
-        - ECR
-        - ECS with FARGATE (for container management / orchestration)
-        - CodeBuild
-        - CodePipeline
-        - TargetGroups
-        - Load Balancer
+    
+    - [GitHub](http://github.com)
+    - Docker
+    - ECR
+    - ECS with FARGATE (for container management / orchestration)
+    - CodeBuild
+    - CodePipeline
+    - TargetGroups
+    - Load Balancer
 
 ## 5. Challenges and Solutions
-    **Challenge**: Source code and their framework versions are obsolete
-    **Solution**: Containerization 
-    **Result**: Achieved supporting current development and allowing the dev-teams to switch between tech-stacks
 
-    **Challenge**: Parity and communication between Dev, Test and Production environments
-    **Solution**: CI / CD Pipeline
-    **Result**: 
-        - Developers can push changes to 'dev' branch on the git repository to run unit tests and can confirm test-ready application.
-        - Testers can run automated/customized tests on test-ready application.
-        - Pushing changes to branch 'master' on git repository deploys application on production environment.
+**Challenge**: Source code and their framework versions are obsolete
+**Solution**: Containerization 
+**Result**: Achieved supporting current development and allowing the dev-teams to switch between tech-stacks
+
+**Challenge**: Parity and communication between Dev, Test and Production environments
+**Solution**: CI / CD Pipeline
+**Result**: 
+    - Developers can push changes to 'dev' branch on the git repository to run unit tests and can confirm test-ready application.
+    - Testers can run automated/customized tests on test-ready application.
+    - Pushing changes to branch 'master' on git repository deploys application on production environment.
 
 ## 6. Conclusion
 - Faster Deployment Times
