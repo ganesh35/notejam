@@ -2,16 +2,12 @@
 
 - [1. Preparing Sourcecode](#1-preparing-source-code)
 - [2. Dockerizing the application](#2-dockerizing-the-application)
-- [3. Create Repository in ECR](#3-create-repository-in-ecr)
-- [4. Create AWS ECS Cluster](#4-create-aws-ecs-cluster)
-- [5. Create Task Definition](#5-create-task-definition)
-- [3. Infrastructure](#3-infrastructure)
-- [4. Outputs](#4-outputs)
-    - [Solution Document](#solution-document)
-    - [Artifacts](#artifacts)
-    - [Working Solution](#working-solution)    
-- [5. Challenges and Solutions](#5-challenges-and-solutions)    
-- [6. Conclusion](#6-conclusion)
+- [3. ECR Repository](#3-ecr-repository)
+- [4. ECS Cluster](#4-ecs-cluster)
+- [5. Task Definition](#5-task-definition)
+- [6. Target Groups](#6-target-groups)
+- [7. Load Balancer](#7-load-balancer)
+
 --------------------------------------------
 
 ## 1. Preparing Source code
@@ -96,7 +92,8 @@ sudo docker stop notejam-running-app; sudo docker rm notejam-running-app; sudo d
 - Create Git repository and push changes to it (or, clone repository from <https://github.com/ganesh35/notejam> )
 
 ----------------------------------
-## 3. Create Repository in ECR
+## 3. ECR Repository
+Create a new ECR Repository
 ### Choose 'Create' from ECR 
 Choose as Private repository and leave other fields to defaults.
 ![Choose 'Create' from ECR](imgs/03_ECR_01.png)
@@ -145,7 +142,7 @@ artifacts:
 
 ```
 ----------------------------------
-## 4. Create AWS ECS Cluster
+## 4. ECS Cluster
 Create  a Cluster with the below information:
 ### Choose 'Networking only' template
 ![Choose 'Networking only' template](imgs/04_Cluster_02.png)
@@ -153,7 +150,7 @@ Create  a Cluster with the below information:
 ![Provide 'Custer name' and click 'Create'](imgs/04_Cluster_03.png)
 
 ----------------------------------
-## 5. Create Task Definition
+## 5. Task Definition
 ### Choose 'FARGATE' as launch type compatibility
 ![Choose 'FARGATE'](imgs/05_TaskDef_01.png)
 ### Provide a Task Definition name
@@ -168,9 +165,23 @@ Create  a Cluster with the below information:
 ![Container](imgs/05_TaskDef_02bb.jpg)
 ![Container](imgs/05_TaskDef_02bc.png)
 Leave the rest fields as defaults and click 'Add' to complete.
+![Container](imgs/05_TaskDef_02c.png)
+Click 'create' to complete Task Definition
 
+----------------------------------
+## 6. Target Groups
+### Create a target group for Load Balancer
+Choose Target Group from EC2 section and create a new group
+![TargetGroup](imgs/06_TargetGroup.jpg)
 
-
+----------------------------------
+## 7. Load Balancer
+### Create a Load Balancer as per below instructions
+![Load Balancer](imgs/07_LoadBalancer_01.jpg)
+![Load Balancer](imgs/07_LoadBalancer_02.jpg)
+![Load Balancer](imgs/07_LoadBalancer_03.jpg)
+![Load Balancer](imgs/07_LoadBalancer_04.jpg)
+![Load Balancer](imgs/07_LoadBalancer_05.jpg)
 
 
 
