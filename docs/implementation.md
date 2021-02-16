@@ -10,6 +10,7 @@
 - [8. Cluster Service](#8-cluster-service)
 - [9. CodeBuild Project](#9-codebuild-project)
 - [10. CodePipeline for CI / CD](#10-codepipeline-for-ci-cd)
+- [11. Conclusion](#11-conclusion)
 --------------------------------------------
 
 ## 1. Preparing Source code
@@ -235,6 +236,7 @@ Before starting CodeBuild make sure this Service role has policy of 'AmazonEC2Co
 
 ### Test
 ![Test](imgs/09_CodeBuild_11.jpg)
+
 ----------------------------------
 ## 10. CodePipeline for CI / CD
 
@@ -248,3 +250,9 @@ Before starting CodeBuild make sure this Service role has policy of 'AmazonEC2Co
 ![Deploy stage](imgs/10_CodePipeline_04.jpg)
 ### Pipeline overview
 ![Pipeline overview](imgs/10_CodePipeline_05.png)
+
+----------------------------------
+## 11. Conclusion
+Improvements:
+  - Route 53 can be configured to use a real domain
+  - LoadBalancer can be configured in accoreance with Target Groups to run web service from port 443
