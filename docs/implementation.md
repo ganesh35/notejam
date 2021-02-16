@@ -253,6 +253,15 @@ Before starting CodeBuild make sure this Service role has policy of 'AmazonEC2Co
 
 ----------------------------------
 ## 11. Conclusion
-Improvements:
+
+## Improvements:
   - Route 53 can be configured to use a real domain
   - LoadBalancer can be configured in accoreance with Target Groups to run web service from port 443
+## Working Demo
+<!-- blank line -->
+<figure class="video_container">
+  <video controls="true" allowfullscreen="true" poster="imgs/notejam_web.png">
+    <source src="imgs/ci_cd.mp4" type="video/mp4">    
+  </video>
+</figure>
+<!-- blank line -->
