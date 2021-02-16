@@ -96,8 +96,6 @@ sudo docker stop notejam-running-app; sudo docker rm notejam-running-app; sudo d
 ----------------------------------
 ## 3. Create AWS ECS Cluster
 Create  a Cluster with the below information:
-### Create Cluster from ECS Service
-![Create Cluster from ECS Service](imgs/01_Cluster_01.png){ width=50% }
 ### Choose 'Networking only' template
 ![Choose 'Networking only' template](imgs/01_Cluster_02.png)
 ### Provide 'Custer name' and click 'Create'
