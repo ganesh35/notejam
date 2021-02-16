@@ -7,6 +7,7 @@
 - [5. Task Definition](#5-task-definition)
 - [6. Target Groups](#6-target-groups)
 - [7. Load Balancer](#7-load-balancer)
+- [8. Cluster Service](#8-cluster-service)
 
 --------------------------------------------
 
@@ -191,3 +192,12 @@ Choose Target Group from EC2 section and create a new group
 ![Launch Type as FARGATE](imgs/08_ClusterService_02.jpg)
 ### Leave rest of fields to defaults and click 'Next' to continue
 ![FARGATE](imgs/08_ClusterService_03.png)
+### Following the below steps
+![Create Service](imgs/08_ClusterService_04.jpg)
+![Create Service](imgs/08_ClusterService_05.jpg)
+![Create Service](imgs/08_ClusterService_06.jpg)
+![Create Service](imgs/08_ClusterService_07.jpg)
+Leave rest of the fields to their defaults and click 'Create service' to complete.
+
+----------------------------------
+## 8. Cluster Service
