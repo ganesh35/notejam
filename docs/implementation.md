@@ -20,7 +20,7 @@ Folder structure:
 ├── buildspec.yml                       // Build specification for AWS CodeBuild
 ├── requirements.txt                    // dependency file for Django packages
 ├── docker-entrypoint.sh                // Entrypoint scripts for Data definitions, migrations, and Unit tests
-└── READMEM.md                          // Basic informatino
+└── READMEM.rst                          // Basic informatino
 
 ## Create necessary files and folders
 ```sh
@@ -28,7 +28,7 @@ mkdir code
 touch Dockerfile buildspec.yml docker-entrypoint.sh
 ```
 - Copy folder <https://github.com/nordcloud/notejam/tree/master/django/notejam> to code in target directory
-- Copy <https://github.com/nordcloud/notejam/edit/master/django/README.rst> to README.md
+- Copy <https://github.com/nordcloud/notejam/edit/master/django/README.rst> to README.rst
 - Copy <https://github.com/nordcloud/notejam/edit/master/django/requirements.txt> to requirements.txt
 
 ## Dockerizing the application
