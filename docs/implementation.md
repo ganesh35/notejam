@@ -9,8 +9,7 @@
 - [7. Load Balancer](#7-load-balancer)
 - [8. Cluster Service](#8-cluster-service)
 - [9. CodeBuild Project](#9-codebuild-project)
-- [10. CodeBuild Project](#9-codebuild-project)
-
+- [10. CodePipeline for CI / CD](#10-codepipeline-for-ci-cd)
 --------------------------------------------
 
 ## 1. Preparing Source code
@@ -207,7 +206,6 @@ Leave rest of the fields to their defaults and click 'Create service' to complet
 
 ----------------------------------
 ## 9. CodeBuild Project
-
 ### Provide a Project name
 ![CodeBuild Project name](imgs/09_CodeBuild_01.jpg)
 ### Define Source provider
@@ -224,14 +222,29 @@ Choose Ubuntu as OS and other paramaters as per below image
 ![Environment](imgs/09_CodeBuild_05.png)
 ![Environment](imgs/09_CodeBuild_06.png)
 Leave rest of fields to defaults and click 'Create build project' to complete.
-
 ### Service role
 Before starting CodeBuild make sure this Service role has policy of 'AmazonEC2ContainerRegistryFullAccess'
-![AmazonEC2ContainerRegistryFullAccess](imgs/09_CodeBuild_07.png)
-
+![AmazonEC2ContainerRegistryFullAccess](imgs/09_CodeBuild_07.jpg)
 ### Start build
-![Start build](imgs/09_CodeBuild_08.png)
+![Start build](imgs/09_CodeBuild_08.jpg)
 ### Make sure build completes Successfully
-![Start success](imgs/09_CodeBuild_09.png)
+![Start success](imgs/09_CodeBuild_09.jpg)
+
+### Get Load Balancer DNS Name for testing
+![LB DNS Name](imgs/09_CodeBuild_10.jpg)
+
+### Test
+![Test](imgs/09_CodeBuild_11.jpg)
 ----------------------------------
-## 10. CodeBuild Project
+## 10. CodePipeline for CI / CD
+
+### Pipeline Settings
+![Pipeline Settings](imgs/10_CodePipeline_01.jpg)
+### Pipeline Source provider
+![Pipeline Source provider](imgs/10_CodePipeline_02.jpg)
+### Build stage
+![Build stage](imgs/10_CodePipeline_03.jpg)
+### Deploy stage
+![Deploy stage](imgs/10_CodePipeline_04.jpg)
+### Pipeline overview
+![Pipeline overview](imgs/10_CodePipeline_05.png)
