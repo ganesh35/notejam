@@ -1,4 +1,4 @@
-# Implementing Dockrized application on AWS with ECS and CI/CD Pipeline.
+# Implementing Dockarized application on AWS with ECS and CI/CD Pipeline.
 
 - [1. Preparing Sourcecode](#1-preparing-source-code)
 - [2. Migration Roadmap](#2-migration-roadmap)
@@ -15,6 +15,7 @@
 Example Folder Structure for a Dockerized application:
 
 Folder structure:
+
 ├── code                                // source code goes here, Django in this case
 ├── Dockerfile                          // Dockerfile to build docker image
 ├── buildspec.yml                       // Build specification for AWS CodeBuild
@@ -89,6 +90,32 @@ sudo docker stop notejam-running-app; sudo docker rm notejam-running-app; sudo d
 - Create Git repository and push changes to it (or, clone repository from <https://github.com/ganesh35/notejam> )
 
 ----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # notejam
