@@ -1,5 +1,3 @@
-terraform apply -var-file="testing.tfvars"
-
 # IaC with Terraform for NoteJam
 
 A set of Terraform templates used for provisioning web application stacks on [AWS ECS Fargate][fargate].
@@ -8,14 +6,16 @@ A set of Terraform templates used for provisioning web application stacks on [AW
 These elements are required to run terraform scripts.
 
 | Name | Description |
-|------|-------------|:---:|
+|------|-------------|
 | AWS Credentials | Assuming that AWS Access keys have been configured using 'aws configure' command |
 | terraform | Terraform executable files has be to configured to run scripts |
 
-### Terraform scripts
+Credential information can be updated using [provider.tf][provider] file.
+
+## Terraform scripts
 
 | Name | Description | 
-|------|-------------|:---:|
+|------|-------------|
 | [variables.tf][variables] | All variable declarations and their default values |
 | [provider.tf][provider] | Cloud provider and availability zone definitions |
 | [network.tf][network] |  Definitions of VPC, Private/Public Subnets and Gateway |
@@ -50,7 +50,7 @@ This will create the whole cluster and will give an endpoint of a loadbalancer o
 Accessing this endpoint in browser should show the notejam home page which means this deployment is successful.
 
 
-### Switching / Creating Environments
+## Switching / Creating Environments
 
 Create more environments from the attached file [testing.tfvars][testing]
 ```sh
@@ -61,6 +61,12 @@ nano production.tfvars
 Add changes to production.tfvars and deploy application.
 ```sh
 terraform apply -var-file="production.tfvars"
+```
+
+## Destroy 
+Do not forget to desctroy deployed stacks when not using.
+```sh
+terraform destroy
 ```
 
 [fargate]: https://aws.amazon.com/fargate/
